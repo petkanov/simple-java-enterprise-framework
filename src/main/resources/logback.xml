@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50}.%M - %msg%n</pattern>-->
+            <pattern>%d{HH:mm:ss.SSS} %green([%thread]) %highlight(%-5level) %logger{50}.%M - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.udemy.course" level="DEBUG" />
+    <logger name="com.udemy.course.ormtool.orm" level="DEBUG" />
+    <logger name="com.udemy.course.ormtool.context" level="DEBUG" />
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
